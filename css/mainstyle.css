@@ -1,0 +1,220 @@
+body {
+  background-color: #EEE;
+}
+
+h1, h2, h3{
+  margin: 0px;
+}
+
+h2 {
+  font-size: 20px;
+}
+h3 {
+  font-size: 18px;
+}
+#overlay {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: .7;
+  display: none;
+  position:fixed;
+  top:0px;
+  left:0px;
+  z-index: 5;
+}
+.container {
+  margin-top: 10px;
+}
+.nav {
+  padding: 10px;
+}
+.nav h3{
+  display:inline-block;
+  width: 90px;
+}
+.ui-sortable-placeholder {
+  border: 2px dashed #bdc3c7;
+}
+.style_card {
+  border: 2px solid #bdc3c7;
+  width:360px;
+  height: 380px;
+  display: inline-block;
+  position:relative;
+  top:0px;
+  background-color: white;
+  margin:10px;
+  float: left;
+  box-shadow: 0px 0px 10px #bdc3c7;
+}
+.style_card:hover {
+  //border-color: black;
+  border-color: #34495E;
+  box-shadow: 0px 5px 15px #34495E;
+  top:-5px;
+  transition: top .2s, box-shadow .2s;
+  -webkit-transition: top .2s, box-shadow .2s;
+}
+.style_card .season{
+  text-align: center;
+  background-color: rgb(52, 152, 219);
+  color: white;
+  cursor: move;
+  font-size: 14px;
+}
+.style_card h3 {
+  padding:7px;
+  border-bottom: 2px solid #bdc3c7;
+}
+.style_card .col-left{
+  width: 70%;
+  float: left;
+  height:91%;
+  text-align: center;
+  border-right: 2px solid #bdc3c7;
+}
+.style_card .col-right{
+  width: 30%;
+  float: left;
+  text-align: center;
+}
+.style_card .col-left .image-block {
+  height: 73%;
+  overflow: hidden;
+}
+.style_card .col-left img {
+  height:100%;
+}
+.style_card .variant {
+  border-bottom: 2px solid #bdc3c7;
+  height:52px;
+  display:block;
+}
+.style_card .variant .quantity {
+  width: 25%;
+  font-size: 18px;
+  float: left;
+  padding:2px;
+  padding-top: 11px;
+  text-align: center;
+}
+.style_card .col-right .swatch {
+  height: 50px;
+  width:75%;
+  float: left;
+  overflow:hidden;
+}
+.style_card .col-right .swatch img{
+  width: 100%;
+}
+.style_card .status span{
+  padding: 5px;
+  width:45px;
+  font-size: 20px;
+  display:inline-block;
+  border: 2px solid #bdc3c7;
+  margin-right:-2px;
+}
+.style_card .status span:hover{
+  background-color: #2ECC71;
+  cursor: pointer;
+}
+.style_card .status span.setting-1{
+  background-color: #2ECC71;
+  border-color: #34495E;
+  z-index: 2;
+  margin-left: -2px;
+  margin-right: 0px;
+}
+
+.focus_card {
+  width: 600px;
+  height: 600px;
+  position: fixed;
+  z-index: 1000;
+  top: 20px;
+  left: 25%;
+  border-color: #34495E;
+  box-shadow: 0px 5px 15px #34495E;
+  transition: width 2s, height 2s;
+  -webkit-transition: width 2s, height 2s;
+}
+.focus_card:hover {
+  top: 20px;
+}
+.focus_card .col-left {
+  height: 92%;
+}
+.focus_card .col-left .image-block{
+  height: 76%;
+}
+.focus_card h3 {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-size: 20px;
+}
+.focus_card .season {
+  font-size: 18px;
+}
+
+.style_card .note {
+  position: absolute;
+  top: 18%;
+  left: 15px;
+}
+.style_card .note .icon {
+  font-size: 30px;
+  color: #E74C3C;
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+}
+.style_card .note .icon:hover {
+  color: #E67E22;
+}
+.note_content {
+  padding: 10px;
+  padding-left: 40px;
+  padding-bottom: 4px;
+  background-color: #ECF0F1;
+  position: absolute;
+  top:0px;
+  left:-5px;
+  z-index: 1;
+  display:none;
+}
+.note_content textarea {
+  font-size: 16px;
+  width: 150px;
+  background-color: rgba(255,255,255,.3);
+  border: none;
+}
+.note_content .clear_button{
+  font-size: 30px;
+  position:absolute;
+  left: 5px;
+  bottom: 0px;
+}
+.note_button{
+  font-size: 30px;
+  color: #ECF0F1;
+  position: absolute;
+  cursor: pointer;
+  top: 18%;
+  left: 15px;
+  display:none;
+}
+.note_button:hover {
+  color: #E74C3C;
+  transition: color .6s;
+}
+.style_card:hover .note_button{
+  display:block;
+}
+.clear_button {
+  cursor: pointer;
+}
+.clear_button:hover{
+  color: #1ABC9C;
+}
